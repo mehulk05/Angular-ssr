@@ -36,6 +36,8 @@ export class WebsiteSsrComponent implements OnInit {
       { name: 'date', content: '2019-10-31', scheme: 'YYYY-MM-DD' },
       { charset: 'UTF-8' }
     ]);
+    this.getServices(723,0)
+    this.getUsers(723)
   }
 
   getWebsite(bid: any, fid: any) {
