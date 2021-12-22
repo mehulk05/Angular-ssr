@@ -45,7 +45,7 @@ export class WebsiteComponent implements OnInit {
 
   getWebsite(bid: any, fid: any) {
     this.apiService.getWebiste(bid, fid).subscribe((data: any) => {
-      // this.website = this.sanitizer.bypassSecurityTrustHtml(data.landingPageTemplate)
+      this.website = this.sanitizer.bypassSecurityTrustHtml(data.landingPageTemplate)
       this.buttonCss = data.buttonCSS
       const head = document.getElementsByTagName('head')[0];
       const style = document.createElement('style');
@@ -74,6 +74,7 @@ export class WebsiteComponent implements OnInit {
 
     this.apiService.getServices(bid).subscribe((data: any) => {
       console.log(data.chatBotEmbeddedCode )
+      
       this.serviceData = data
       let service_created_html = ""
       if (isPlatformBrowser(this.platformId)) {
