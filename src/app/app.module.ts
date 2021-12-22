@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageComponent } from './public/landingpage/landingpage.component';
 import { WebsiteComponent } from './public/website/website.component';
+import { WebsiteSsrComponent } from './public/website-ssr/website-ssr.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
-    WebsiteComponent
+    WebsiteComponent,
+    WebsiteSsrComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

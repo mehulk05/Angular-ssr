@@ -1,0 +1,35 @@
+<div class="mainsection" id="landingPage">
+    <div id="website">
+        <div class="hidden">
+            <div [innerHtml]="website"></div>
+        </div>
+    </div>
+
+    <div class="d-none">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let service of serviceData">
+                <h1>{{service?.name}}</h1>
+                <p>
+                    {{service?.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-none">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let user of usersData">
+                <h1>{{user.firstName}} {{user.lastName}}</h1>
+                <img src={{user.profileImageUrl}}>
+                <button>
+                    Book now
+                </button>
+                <!-- <p>
+                    {{.description}}
+                </p> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="chatbot"></div>
+</div>
