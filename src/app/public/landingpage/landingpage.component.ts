@@ -12,6 +12,7 @@ import { MetaService } from 'src/app/services/meta.service';
 export class LandingpageComponent implements OnInit {
   title = 'angular-ssr';
   landingPage:any 
+
   constructor(
     private apiService:ApiServiceService,
     private sanitizer: DomSanitizer,
@@ -32,11 +33,13 @@ export class LandingpageComponent implements OnInit {
     this.apiService.getLandingPage(723,11921).subscribe((data:any)=>{
       this.landingPage = this.sanitizer.bypassSecurityTrustHtml(data.landingPageTemplate)
       console.log(data);
+
       this.metaService.updateTitle(data.name);
-      this.metaService.updateDescription(data.landingPageTemplate)
-     
     })
-      
   }
 
+
+  
 }
+
+

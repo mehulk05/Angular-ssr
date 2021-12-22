@@ -26,9 +26,24 @@ export class ApiServiceService {
 
 
   getLandingPage(bid: any,fid: any){
-  this.url = this.url+"/api/public/landingpage/"+fid
+  let url = this.url+"/api/public/landingpage/"+fid
   //  let headers :any =  this.getTenantHttpOptions(bid);
   //  console.log(headers)
-  return this.http.get(this.url,this.getTenantHttpOptions(bid))
+  return this.http.get(url,this.getTenantHttpOptions(bid))
   }
+
+  getWebiste(bid: any,fid: any){
+  let url  = this.url+"/api/public/v1/landingPage/"+fid
+    return this.http.get(url,this.getTenantHttpOptions(bid))
+  }
+
+  getServices(bid: any){
+  let url  = this.url+"/api/public/v1/business/" + bid + "/services"
+    return this.http.get(url,this.getTenantHttpOptions(bid))
+  }
+
+  getUsers(bid: any){
+    let url  = this.url+"/api/public/v1/business/" + bid + "/users"
+      return this.http.get(url,this.getTenantHttpOptions(bid))
+    }
 }

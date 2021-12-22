@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageComponent } from './public/landingpage/landingpage.component';
+import { WebsiteComponent } from './public/website/website.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
