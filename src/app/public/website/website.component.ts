@@ -32,15 +32,17 @@ export class WebsiteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
-      console.log(params, params.bid, params.fid)
-      this.getWebsite(params.bid, params.lpid)
-      this.bid = params.bid
+    // this.activatedRoute.queryParams.subscribe(params => {
+    //   console.log(params, params.bid, params.fid)
+    this.bid = this.activatedRoute.snapshot.queryParams[ 'bid' ];
+    this.lpid = this.activatedRoute.snapshot.queryParams[ 'lpid' ];
+    console.log(this.bid,this.lpid)
+    this.getWebsite(this.bid,this.lpid)
+    // });
+    //   this.getWebsite(params.bid, params.lpid)
+    //   this.bid = params.bid
 
-      this.lpid = params.lpid
-    
-    });
-
+    //   this.lpid = params.lpid
   }
 
   getWebsite(bid: any, fid: any) {
