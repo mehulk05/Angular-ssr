@@ -30,7 +30,7 @@ export class WebsiteSsrComponent implements OnInit {
     this.metaService.setCanonicalURL()
     this.metaService.addTags([
       { name: 'keywords', content: 'Angular SEO Integration, Music CRUD, Angular Universal' },
-      { name: 'robots', content: 'index, follow' },
+      { name: 'robots', content: 'NoIndex, follow' },
       { name: 'author', content: 'Digamber Singh' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'date', content: '2019-10-31', scheme: 'YYYY-MM-DD' },
